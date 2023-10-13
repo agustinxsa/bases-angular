@@ -10,12 +10,20 @@ export class HeroComponent {
   public age: number = 45;
 
 
-  get capitalizedName() : string {
+  get capitalizedName(): string {
     return this.name.toUpperCase();
-  }
+  };
 
   getHeroDescription(): string {
-    return `${this.name} - ${this.age}`
-  }
+    return `${this.name} - ${this.age}`;
+  };
+
+  changeNameOfTheSuperHero(): void {
+    this.name = "Vegeta";
+  };
+
+  changeAgeOfTheSuperHeroe(): void {
+    this.age = 50;
+  };
 
 }
