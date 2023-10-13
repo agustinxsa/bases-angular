@@ -21,4 +21,8 @@ export class AppComponent {
     this.counter += value;
   };
 
+  resetCounterToZero(): void {
+    this.counter = 0;
+  }
+
 }
