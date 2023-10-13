@@ -7,22 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public title: string = 'hola mundito';
-  public counter: number = 0;
-
-  increaseBy(): void {
-    this.counter += 1;
-  };
-
-  decreaseBy(): void {
-    this.counter -= 1;
-  };
-
-  increaseOrDecrese(value: number): void {
-    this.counter += value;
-  };
-
-  resetCounterToZero(): void {
-    this.counter = 0;
-  }
-
 }
