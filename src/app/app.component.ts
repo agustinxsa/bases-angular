@@ -17,4 +17,8 @@ export class AppComponent {
     this.counter -= 1;
   };
 
+  increaseOrDecrese(value: number): void {
+    this.counter += value;
+  };
+
 }
