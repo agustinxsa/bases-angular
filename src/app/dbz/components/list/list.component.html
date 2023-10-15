@@ -1,11 +1,26 @@
 <h4>List</h4>
 <ul class="list-group">
   <li
-  *ngFor="let character of listOfCharacter"
-  class="list-group-item">
-    <span>{{character.name}} - </span>
+  *ngFor="
+    let character of listOfCharacter;
+    let i = index;
+    let isFirst = first;
+    let isLast = last;
+    let isEven = even;
+    "
+  class = "list-group-item"
+  [ngClass] = "{
+    'list-group-item-success': isFirst,
+    'list-group-item-dark': isLast
+  }"
+  >
+    <span class="text-primary"> {{ i + 1 }}</span>
+    <span> {{character.name}} - </span>
     <strong>Power: </strong>
       {{ character.power }}
+
+    <span> Es el primero: {{isFirst}} </span>
+    <span> Es el el ultimo: {{isLast}} </span>
   </li>
 
 </ul>
